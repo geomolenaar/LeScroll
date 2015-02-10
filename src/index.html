@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>LeScroll - One page scroll</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="mask">
+      <nav>
+        <ul>
+          <li data-section="0"></li>
+          <li data-section="1"></li>
+          <li data-section="2"></li>
+          <li data-section="3"></li>
+        </ul>
+      </nav>
+      <div id="container">
+        <section class="turquoise-bg">
+          <div class="content">
+            <h1>LeScroll.js</h1>
+            <h4>One page scroll in vanilla JavaScript</h4>
+            <div class="arrowdown"></div>
+          </div>
+          
+        </section>
+        <section class="carrot-bg">
+           <div class="content">
+            <h1>Navigation</h1>
+            <h4>Use either your keyboard, mouse or the bullets on the right side of this page to navigate through all the different sections. </h4>
+          </div>
+        </section>
+        <section class="blue-bg">
+         <div class="content">
+            <h1>Manually create event listeners</h1>
+            <h4>Simply add an event by specifying the id or class of your element and the section you want it linked to</h4>
+            <div class="code">leScroll.addEvent('#clickme', 0);
+              <button id="clickme">Go to the last section</button>
+            </div>
+            <div class="code">leScroll.addEvent('.next', 3);
+            <button class="next">Go to the last section</button>
+            </div>
+            
+          </div>
+          
+        </section>
+        <section class="turquoise-bg">
+          <div class="content">
+            <h1>Github</h1>
+            <a href="https://github.com/geomolenaar/LeScroll" target="_blank"><h4>Download or contribute</h4></a>
+            <div class="arrowup"></div>
+          </div>
+        </section>
+      </div>
+    </div>  
+		<script src="scripts/main.js"></script>
+        <script src="scripts/client.js"></script>
+        
+		<script>
+		  leScroll.addEvent('.arrowdown', 1);
+		  leScroll.addEvent('#clickme', 0);
+		  leScroll.addEvent('.next', 3);
+		  leScroll.addEvent('.arrowup', 0);
+		</script>
+</body>
+</html>
