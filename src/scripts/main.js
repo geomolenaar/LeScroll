@@ -12,28 +12,28 @@ var leScroll = (function(leScroll) {
 
 	leScroll.scrolling = false;
 
-    leScroll.move = function() {
-        if(iOS) {
-                document.getElementById('container').style.top = '-' + (currentSectionNumber * maskHeight) + 'px';
-            } else {
-                document.getElementById('container').style.top = '-' + (currentSectionNumber * window.innerHeight) + 'px';
-        }
-    };
+        leScroll.move = function() {
+        	if(iOS) {
+	                document.getElementById('container').style.top = '-' + (currentSectionNumber * maskHeight) + 'px';
+	            } else {
+	                document.getElementById('container').style.top = '-' + (currentSectionNumber * window.innerHeight) + 'px';
+	        }
+	};
 
 	leScroll.moveUp = function() {
 		if (currentSectionNumber === 0) {
-            return;
-        }
-        currentSectionNumber--;
-        leScroll.move();
+            		return;
+        	}
+	        currentSectionNumber--;
+	        leScroll.move();
 	};
 
 	leScroll.moveDown = function() {
 		if (currentSectionNumber === sectionCount) {
-            return;
-        }
-        currentSectionNumber++;
-        leScroll.move();
+        		return;
+        	}
+	        currentSectionNumber++;
+	        leScroll.move();
 	};
 
 	leScroll.moveTo = function(sectionNumber) {
@@ -42,16 +42,16 @@ var leScroll = (function(leScroll) {
 	};
 
 	leScroll.addEvent = function(element, sectionNumber) {
-        document.querySelector(element).addEventListener('click', function() {
-            leScroll.moveTo(sectionNumber);
-        });
-    };
+        	document.querySelector(element).addEventListener('click', function() {
+                	leScroll.moveTo(sectionNumber);
+		});
+        };
 
-    leScroll.setScrollTimeout = function(ms) {
-    	setTimeout(function(){
-            leScroll.scrolling = false;
-        }, ms);
-    };
+        leScroll.setScrollTimeout = function(ms) {
+    		setTimeout(function(){
+            		leScroll.scrolling = false;
+        	}, ms);
+        };
 
 	return leScroll;
 	
