@@ -15,7 +15,6 @@ Scroll through the different sections either using the keyboard, mouse wheel or 
 
 # HTML Structure
 ```html
-<pre>
 	<div id="mask">
 		<nav>
 			<ul>
@@ -40,7 +39,6 @@ Scroll through the different sections either using the keyboard, mouse wheel or 
 		</div>
 	</div>
 	<script src="scripts/lescroll.min.js"></script>
-</pre>
 ```
 
 # Add new section
